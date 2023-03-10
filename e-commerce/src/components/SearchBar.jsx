@@ -1,18 +1,21 @@
 import { useState } from "react";
-import { Link } from 'react-router-dom'
-import { ToastContainer, toast } from 'react-toastify';
-
+import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
 
 export default function SearchBar(props) {
   const [showWish, setShowWish] = useState(false);
   const [showBasket, setShowBasket] = useState(false);
-  const notifyBasketRemove = (title) => toast.error(title + "-г сагснаас амжилттай устгалаа.! ", {
-    icon: <i class="bi bi-trash3"></i>
-  });
+  const [searchValue, setSearchValue] = useState();
 
-  const notifyWishlistRemove = (title) => toast.error(title + "-г Wislist-ээс амжилттай устгалаа .! ", {
-    icon: <i class="bi bi-trash3"></i>
-  });
+  const notifyBasketRemove = (title) =>
+    toast.error(title + "-г сагснаас амжилттай устгалаа.! ", {
+      icon: <i class="bi bi-trash3"></i>,
+    });
+
+  const notifyWishlistRemove = (title) =>
+    toast.error(title + "-г Wislist-ээс амжилттай устгалаа .! ", {
+      icon: <i class="bi bi-trash3"></i>,
+    });
 
   function clearCart() {
     props.setBasket([]);
@@ -22,7 +25,6 @@ export default function SearchBar(props) {
     props.setWishlist([]);
   }
 
-
   function removeFromBasket(id, title, props) {
     console.log("--------To remove from Basket ");
     console.log("Basket remove ID = " + id);
@@ -30,14 +32,11 @@ export default function SearchBar(props) {
     notifyBasketRemove(title);
   }
 
+  console.log("Wishlist array = ");
+  console.log(props.wishlist);
 
-  console.log("Wishlist array = ")
-  console.log(props.wishlist)
-
-
-  console.log("Basket array = ")
-  console.log(props.basket)
-
+  console.log("Basket array = ");
+  console.log(props.basket);
 
   function removeFromWishlist(id, title, props) {
     console.log("--------To remove from wishlist ");
@@ -46,14 +45,19 @@ export default function SearchBar(props) {
     notifyWishlistRemove(title);
   }
 
+  function handleSearchInput(e) {
+    setSearchValue(e.target.value);
+    console.log(e.target.value);
+  }
 
   return (
     <div className="searchbar-container">
       <div className="container">
         <div className="row xx">
           <div className="logo-container col-4 col-md-3">
-
-            <Link to={'/'}><img src="image/content/logo1.png" alt="" /></Link>
+            <Link to={"/"}>
+              <img src="image/content/logo1.png" alt="" />
+            </Link>
           </div>
 
           <div className="col-6 col-md-4 d-none d-md-block">
@@ -64,10 +68,13 @@ export default function SearchBar(props) {
                 placeholder="Search"
                 aria-label="Search"
                 aria-describedby="search-addon"
+                onChange={handleSearchInput}
               />
-              <button type="button" className="btn btn-warning">
-                search
-              </button>
+              <Link to="/search" state={{ data: searchValue }}>
+                <button type="button" className="btn btn-warning">
+                  search
+                </button>
+              </Link>
             </div>
           </div>
 
@@ -77,10 +84,12 @@ export default function SearchBar(props) {
               <i className="bi bi-person"></i>
               <span className="space"> </span>
               <Link to={"/signup"}>Sign in</Link>
-
             </div>
             <div className="favorite">
-              <i className="bi bi-suit-heart" onClick={() => setShowWish(!showWish)}>
+              <i
+                className="bi bi-suit-heart"
+                onClick={() => setShowWish(!showWish)}
+              >
                 {props.wishlist.length > 0 ? (
                   <div id="wishSize">
                     <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
@@ -93,7 +102,10 @@ export default function SearchBar(props) {
               </i>
             </div>
             <div className="basket">
-              <i className="bi bi-cart" onClick={() => setShowBasket(!showBasket)}>
+              <i
+                className="bi bi-cart"
+                onClick={() => setShowBasket(!showBasket)}
+              >
                 {props.basket.length > 0 ? (
                   <div id="basketSize">
                     <span className="position-absolute top-0 start-95 translate-middle badge rounded-pill bg-danger">
@@ -110,44 +122,76 @@ export default function SearchBar(props) {
 
         {showWish && (
           <div id="wishlist-container">
-            <a onClick={() => setShowWish(false)}><i className="bi bi-x-circle-fill close-btn"> </i></a>
+            <a onClick={() => setShowWish(false)}>
+              <i className="bi bi-x-circle-fill close-btn"> </i>
+            </a>
             <div className="wishlist-header d-flex justify-content-between">
               <h4>Таны Wishlist</h4>
-              <button className="btn btn-warning" onClick={() => { clearWishlist() }}>Хоослох</button>
+              <button
+                className="btn btn-warning"
+                onClick={() => {
+                  clearWishlist();
+                }}
+              >
+                Хоослох
+              </button>
             </div>
 
-            {props.wishlist.length > 0 ? (props.wishlist.map((myWishList, index) => {
-              return (
-                <div key={index} className="wishlist-product">
-                  <img src={myWishList.imgUrl[0].original} alt="myWishList.title" />
-                  <div>
-                    <div>{myWishList.title}</div>
-                    <div>${myWishList.price}</div>
+            {props.wishlist.length > 0 ? (
+              props.wishlist.map((myWishList, index) => {
+                return (
+                  <div key={index} className="wishlist-product">
+                    <img
+                      src={myWishList.imgUrl[0].original}
+                      alt="myWishList.title"
+                    />
+                    <div>
+                      <div>{myWishList.title}</div>
+                      <div>${myWishList.price}</div>
+                    </div>
+                    <div>
+                      <a
+                        onClick={() =>
+                          removeFromWishlist(
+                            myWishList.id,
+                            myWishList.title,
+                            props
+                          )
+                        }
+                      >
+                        <i className="bi bi-x-circle-fill"> </i>
+                      </a>
+                    </div>
                   </div>
-                  <div>
-                    <a onClick={() => removeFromWishlist(myWishList.id, myWishList.title, props)}>
-                      <i className="bi bi-x-circle-fill"> </i>
-                    </a>
-                  </div>
-                </div>
-              );
-            })) : <div>
-              <h5>Таны wishlist хоосон байна</h5>
-            </div>}
+                );
+              })
+            ) : (
+              <div>
+                <h5>Таны wishlist хоосон байна</h5>
+              </div>
+            )}
           </div>
         )}
 
         {showBasket && (
           <div id="basket-container">
-            <a onClick={() => setShowBasket(false)}><i className="bi bi-x-circle-fill close-btn"> </i></a>
+            <a onClick={() => setShowBasket(false)}>
+              <i className="bi bi-x-circle-fill close-btn"> </i>
+            </a>
             <div className="basket-header d-flex justify-content-between">
               <h4>Таны сагс</h4>
-              <button className="btn btn-warning" onClick={() => { clearCart() }}>Хоослох</button>
+              <button
+                className="btn btn-warning"
+                onClick={() => {
+                  clearCart();
+                }}
+              >
+                Хоослох
+              </button>
             </div>
 
-
-            {props.basket.length > 0 ?
-              (props.basket.map((basket, index) => {
+            {props.basket.length > 0 ? (
+              props.basket.map((basket, index) => {
                 return (
                   <div>
                     <div key={index} className="basket-product">
@@ -161,23 +205,35 @@ export default function SearchBar(props) {
                         <div>Size: {basket.selectedSize}</div>
                       </div>
                       <div>
-                        <a onClick={() => removeFromBasket(basket.id, basket.title, props)}>
+                        <a
+                          onClick={() =>
+                            removeFromBasket(basket.id, basket.title, props)
+                          }
+                        >
                           <i className="bi bi-x-circle-fill"> </i>
                         </a>
                       </div>
-
                     </div>
-
                   </div>
                 );
-              })) : <div>
+              })
+            ) : (
+              <div>
                 <h5>Таны сагс хоосон байна</h5>
-              </div>}
-            < div className="go-to-cart"> <Link to={"/cart"}> <button className="btn btn-warning" id='go-to-basket-button'>Сагсруу үсрэх</button> </Link> </div>
+              </div>
+            )}
+            <div className="go-to-cart">
+              {" "}
+              <Link to={"/cart"}>
+                {" "}
+                <button className="btn btn-warning" id="go-to-basket-button">
+                  Сагсруу үсрэх
+                </button>{" "}
+              </Link>{" "}
+            </div>
           </div>
         )}
-
       </div>
-    </div >
+    </div>
   );
 }

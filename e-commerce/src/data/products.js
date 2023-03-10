@@ -17,17 +17,23 @@ const products = [
     ],
     imgUrl: [
       {
-        original: "https://s7d1.scene7.com/is/image/canon/1483C082_eos-5d-mark-iv-with-canon-log_3?fmt=webp-alpha&wid=600",
-        thumbnail: "https://s7d1.scene7.com/is/image/canon/1483C082_eos-5d-mark-iv-with-canon-log_3?fmt=webp-alpha&wid=200",
+        original:
+          "https://s7d1.scene7.com/is/image/canon/1483C082_eos-5d-mark-iv-with-canon-log_3?fmt=webp-alpha&wid=600",
+        thumbnail:
+          "https://s7d1.scene7.com/is/image/canon/1483C082_eos-5d-mark-iv-with-canon-log_3?fmt=webp-alpha&wid=200",
       },
       {
-        original: 'https://s7d1.scene7.com/is/image/canon/1483C082_eos-5d-mark-iv-with-canon-log_primary?fmt=webp-alpha&wid=600',
-        thumbnail: 'https://s7d1.scene7.com/is/image/canon/1483C082_eos-5d-mark-iv-with-canon-log_primary?fmt=webp-alpha&wid=200'
+        original:
+          "https://s7d1.scene7.com/is/image/canon/1483C082_eos-5d-mark-iv-with-canon-log_primary?fmt=webp-alpha&wid=600",
+        thumbnail:
+          "https://s7d1.scene7.com/is/image/canon/1483C082_eos-5d-mark-iv-with-canon-log_primary?fmt=webp-alpha&wid=200",
       },
       ,
       {
-        original: 'https://s7d1.scene7.com/is/image/canon/1483C082_eos-5d-mark-iv-with-canon-log_2?fmt=webp-alpha&wid=600',
-        thumbnail: 'https://s7d1.scene7.com/is/image/canon/1483C082_eos-5d-mark-iv-with-canon-log_2?fmt=webp-alpha&wid=200'
+        original:
+          "https://s7d1.scene7.com/is/image/canon/1483C082_eos-5d-mark-iv-with-canon-log_2?fmt=webp-alpha&wid=600",
+        thumbnail:
+          "https://s7d1.scene7.com/is/image/canon/1483C082_eos-5d-mark-iv-with-canon-log_2?fmt=webp-alpha&wid=200",
       },
     ],
     price: 2599,
@@ -39,7 +45,8 @@ const products = [
       },
       {
         customer: "Kevin",
-        review: "I bought a brand new Canon 5D Mark IV with Canon Log and after a month of using it the body is now dead. It does not turn on. So frustrated and disappointed.",
+        review:
+          "I bought a brand new Canon 5D Mark IV with Canon Log and after a month of using it the body is now dead. It does not turn on. So frustrated and disappointed.",
       },
       {
         customer: "Jonny",
@@ -200,8 +207,10 @@ const products = [
     ],
     imgUrl: [
       {
-        original: "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWGDb8?ver=3633&q=90&m=6&h=460&w=818&b=%23FFFFFFFF&l=f&o=t&aim=true",
-        thumbnail: "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWGDb8?ver=3633&q=90&m=6&h=460&w=818&b=%23FFFFFFFF&l=f&o=t&aim=true",
+        original:
+          "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWGDb8?ver=3633&q=90&m=6&h=460&w=818&b=%23FFFFFFFF&l=f&o=t&aim=true",
+        thumbnail:
+          "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWGDb8?ver=3633&q=90&m=6&h=460&w=818&b=%23FFFFFFFF&l=f&o=t&aim=true",
       },
     ],
     price: 11.7,
@@ -391,12 +400,16 @@ const products = [
     ],
     imgUrl: [
       {
-        original: "https://blog.playstation.com/tachyon/2053/01/2bc04c3f8d548a11ef6b82562ffd8cebfdd32219-scaled.jpg?resize=1088%2C612&crop_strategy=smart&zoom=1.5",
-        thumbnail: "https://blog.playstation.com/tachyon/2053/01/2bc04c3f8d548a11ef6b82562ffd8cebfdd32219-scaled.jpg?resize=1088%2C612&crop_strategy=smart&zoom=0.8",
+        original:
+          "https://blog.playstation.com/tachyon/2053/01/2bc04c3f8d548a11ef6b82562ffd8cebfdd32219-scaled.jpg?resize=1088%2C612&crop_strategy=smart&zoom=1.5",
+        thumbnail:
+          "https://blog.playstation.com/tachyon/2053/01/2bc04c3f8d548a11ef6b82562ffd8cebfdd32219-scaled.jpg?resize=1088%2C612&crop_strategy=smart&zoom=0.8",
       },
       {
-        original: "https://blog.playstation.com/tachyon/2022/12/9807b7362d4d47f8a6669e2fbb8dcaf2d8737936-scaled.jpg?resize=1088%2C612&crop_strategy=smart&zoom=1.5",
-        thumbnail: "https://blog.playstation.com/tachyon/2022/12/9807b7362d4d47f8a6669e2fbb8dcaf2d8737936-scaled.jpg?resize=1088%2C612&crop_strategy=smart&zoom=0.8",
+        original:
+          "https://blog.playstation.com/tachyon/2022/12/9807b7362d4d47f8a6669e2fbb8dcaf2d8737936-scaled.jpg?resize=1088%2C612&crop_strategy=smart&zoom=1.5",
+        thumbnail:
+          "https://blog.playstation.com/tachyon/2022/12/9807b7362d4d47f8a6669e2fbb8dcaf2d8737936-scaled.jpg?resize=1088%2C612&crop_strategy=smart&zoom=0.8",
       },
       {
         original: "",
@@ -420,8 +433,10 @@ const products = [
     ],
     imgUrl: [
       {
-        original: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MX412?wid=572&hei=572&fmt=jpeg&qlt=95&.v=1580420170758",
-        thumbnail: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MX412?wid=572&hei=572&fmt=jpeg&qlt=95&.v=1580420170758",
+        original:
+          "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MX412?wid=572&hei=572&fmt=jpeg&qlt=95&.v=1580420170758",
+        thumbnail:
+          "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MX412?wid=572&hei=572&fmt=jpeg&qlt=95&.v=1580420170758",
       },
     ],
     price: 11.7,
@@ -441,16 +456,22 @@ const products = [
     ],
     imgUrl: [
       {
-        original: "https://media.takealot.com/covers_images/73526d01f0af47ab9742eb782201f909/s-zoom.file",
-        thumbnail: "https://media.takealot.com/covers_images/73526d01f0af47ab9742eb782201f909/s-zoom.file",
+        original:
+          "https://media.takealot.com/covers_images/73526d01f0af47ab9742eb782201f909/s-zoom.file",
+        thumbnail:
+          "https://media.takealot.com/covers_images/73526d01f0af47ab9742eb782201f909/s-zoom.file",
       },
       {
-        original: "https://media.takealot.com/covers_images/07917d409e2b4326a9a9769716501bf3/s-zoom.file",
-        thumbnail: "https://media.takealot.com/covers_images/07917d409e2b4326a9a9769716501bf3/s-zoom.file",
+        original:
+          "https://media.takealot.com/covers_images/07917d409e2b4326a9a9769716501bf3/s-zoom.file",
+        thumbnail:
+          "https://media.takealot.com/covers_images/07917d409e2b4326a9a9769716501bf3/s-zoom.file",
       },
       {
-        original: "https://media.takealot.com/covers_images/054d6cd4a8de459e999cd6f55186ae10/s-zoom.file",
-        thumbnail: "https://media.takealot.com/covers_images/054d6cd4a8de459e999cd6f55186ae10/s-zoom.file",
+        original:
+          "https://media.takealot.com/covers_images/054d6cd4a8de459e999cd6f55186ae10/s-zoom.file",
+        thumbnail:
+          "https://media.takealot.com/covers_images/054d6cd4a8de459e999cd6f55186ae10/s-zoom.file",
       },
     ],
     price: 11.7,
@@ -523,8 +544,10 @@ const products = [
     ],
     imgUrl: [
       {
-        original: "https://images.philips.com/is/image/PhilipsConsumer/TAH4205BL_00-IMS-en_IQ?wid=420&hei=360&$jpglarge$",
-        thumbnail: "https://images.philips.com/is/image/PhilipsConsumer/TAH4205BL_00-IMS-en_IQ?wid=420&hei=360&$jpglarge$",
+        original:
+          "https://images.philips.com/is/image/PhilipsConsumer/TAH4205BL_00-IMS-en_IQ?wid=420&hei=360&$jpglarge$",
+        thumbnail:
+          "https://images.philips.com/is/image/PhilipsConsumer/TAH4205BL_00-IMS-en_IQ?wid=420&hei=360&$jpglarge$",
       },
     ],
     price: 11.7,
